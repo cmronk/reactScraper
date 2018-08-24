@@ -9,3 +9,11 @@ router.get("/articles", (req, res) => {
 });
 
 module.exports = router;
+
+
+
+// TODO
+// start with getting the form info
+// figure out scraping with react
+// configure database to use with scraping
+// this isnt correct

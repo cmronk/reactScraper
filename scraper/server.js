@@ -2,9 +2,11 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/apiRoutes");
+
 
 // middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,6 +18,9 @@ if (process.env.NODE_ENV === "production") {
 
 // API routes here
 app.use("/api", apiRoutes);
+
+// db connection
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/nytreact");
 
 // Sends other requests to React App
 app.get("*", (req, res) => {

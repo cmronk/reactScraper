@@ -6,6 +6,7 @@ const Searches = props => (
         <div className="card-header">
         Searches
         </div>
+        
         <form>
             <div className="form-group">
                 <label for="formGroupExampleInput">Topic</label>
