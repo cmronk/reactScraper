@@ -5,19 +5,19 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const apiRoutes = require("./routes/apiRoutes");
-
 
 // middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 // static assets
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 };
 
-// API routes here
-app.use("/api", apiRoutes);
+// routes here
+const routes = require("./routes");
+app.use(routes);
 
 // db connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/nytreact");
