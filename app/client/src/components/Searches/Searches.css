@@ -1,0 +1,12 @@
+.card {
+    padding: 10px;
+    /* border: 1px solid black;
+    border-radius: 0; */
+    margin: 20px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+.card-header {
+    margin-bottom: 15px;
+    text-align: center;
+}

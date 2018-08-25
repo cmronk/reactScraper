@@ -1,0 +1,17 @@
+.card {
+    padding: 10px;
+    /* border: 1px solid black; */
+    margin: 20px;
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+/* .thumbnail {
+    border: 1px solid black;
+} */
+
+.article-title {
+    text-align: center
+}
